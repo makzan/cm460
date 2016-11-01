@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Float demo on class</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      *{
+  box-sizing: border-box;
+}
+body {
+/*   padding: 10px; */
+  background: #f8f8f8;
+}
+
+/* Simple Grid */
+.row {
+  overflow: auto;
+/*   border: 1px solid blue; */
+}
+
+.row .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.col {
+  float: left;
+/*   border: 1px solid red; */
+  padding: 10px;
+  width: 100%;
+}
+.main.col {
+  width: 70%;
+  background: white;
+}
+.sidebar.col {
+  width: 30%;
+  color: gray;
+}
+
+.page {
+  background: lightgray;
+}
+.title {
+  background: #efefef;
+  border-top: 6px solid gold;
+  color: gold;  
+}
+.title h1 {
+  margin: 0;
+  font-size: 120%;
+}
+
+.footer {
+  background: #efefef;
+  border-top: 3px solid gray;
+}
+
+/* Grid */
+.small-1  { width: 8.33333% }
+.small-2  { width: 16.666667% }
+.small-3  { width: 25% }
+.small-4  { width: 33.3333% }
+.small-5  { width: 41.6666667% }
+.small-6  { width: 50% }
+.small-7  { width: 58.3333333% }
+.small-8  { width: 66.666667% }
+.small-9  { width: 75% }
+.small-10 { width: 83.333333% }
+.small-11 { width: 91.66666667% }
+.small-12 { width: 100% }
+
+@media screen and (max-width: 400px) {
+  .col {width: 100%}
+}
+
+
+
+
+
+/* Nav */
+
+ul {
+  overflow: auto;
+  list-style: none;
+  padding: 0;
+}
+li {
+  float: left;  
+}
+/* Style 1 */
+ul.style1 li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  background: gold;
+  padding: 10px;
+  border-right: 1px solid black;  
+}
+ul.style1 li a:hover {
+  background: yellow;
+}
+
+/* Style 2 */
+ul.style2 li {
+  margin: 10px;
+}
+ul.style2 li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  background: lightgreen;
+  padding: 10px;
+  border: 1px solid black;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+/*   border-radius: 50%; */
+}
+ul.style2 li a:hover {
+  background: yellow;
+  border-bottom: 3px solid black;
+}
+
+ul.style3 li a {
+  display: block;
+  padding: 20px;
+  color: black;
+  text-decoration: none;  
+  border: 1px dotted #efefef;
+  background: white;
+  transition: background 0.3s;
+}
+ul.style3 li a:hover {
+  background: #efefef;
+  border-bottom: 3px solid black;
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  
+<div class='title row'>
+  <div class='col'>
+    <h1>Website Title</h1>
+  </div>
+</div>
+<div class='page row'>
+  <div class='small-8 col'>Main area here. Main area here. Main area here. Main area here. Main area here. Main area here. </div>
+  <div class='small-4 col'>Side bar</div>
+</div>
+<div class='footer row'>
+  <div class='col'>
+    Footer
+  </div>
+</div>
+
+
+<nav>
+  <ul class='style3'>
+    <li><a href=''>Link 1</a></li>
+    <li><a href=''>Link 2</a></li>
+    <li><a href=''>Link 3</a></li>
+  </ul>
+</nav>
+<div class="row">
+  <div class="col">
+    Title
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 col">Left</div>
+  <div class="small-4 col">Middle</div>
+  <div class="small-4 col">Right</div>
+</div>
+<div class="row">
+  <div class="small-8 col">
+    
+    <div class="row">
+      <div class="small-6 col">
+        LEFT
+      </div>
+      <div class="small-6 col">
+        RIGHT
+      </div>
+    </div>
+    
+    
+    
+  </div>
+  <div class="small-4 col">
+    Text
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 col">
+    Text
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 col">Left</div>
+  <div class="small-4 col">Middle</div>
+  <div class="small-4 col">Right</div>  
+</div>
+<div class="row">
+  <div class="small-12 col">
+    Footer
+  </div>
+</div>
+  
+  
+</body>
+</html>
